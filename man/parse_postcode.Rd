@@ -2,18 +2,18 @@
 % Please edit documentation in R/postcode.R
 \name{parse_postcode}
 \alias{parse_postcode}
-\title{Extract postcode(s) from an address}
+\title{Extract postcode from an address}
 \usage{
-parse_postcode(.data, address)
+parse_postcode(address)
 }
 \arguments{
-\item{.data}{Input data set}
-
 \item{address}{Address variable}
-}
-\value{
-A tibble with the number postcodes found (5 digits) & the extracted postcode
+
+\item{.data}{Input data set}
 }
 \description{
-Extract postcode(s) from an address
+Extracts postcode (5 digits). If more than one postcode (5 digits) can be found, it will return the last postcode found.
+}
+\examples{
+parse_postcode("5, shah alam, 40150")
 }
